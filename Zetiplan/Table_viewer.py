@@ -19,18 +19,15 @@ def Get_DET(position):
 
     fileobject=open('Teachers_list.csv','r')
     data=csv.reader(fileobject)
-    print(data)
 
     
-
+    
     for j in data:
         templist=[]
         if j!=[]:
             for i in j:
-                print(i)
                 templist.append(eval(i)[0])
 
-            print()
 
             teachlist.append(templist)
 
@@ -38,5 +35,7 @@ def Get_DET(position):
 
     deptnames=['CSE Time Table','ECE Time Table','EEE Time Table','Civil Time Table','Mech Time Table']
     return [fulllist[position],teachlist[position],deptnames[position],position]
+
+
 
 

@@ -126,7 +126,7 @@ def mainpage():
         img3=PhotoImage(file='pic1.png')
         img_3=img3.subsample(6,6)
         staffmng_button=Button(left_frame,text='''Time Table
-Creater''',image=img_3,compound=LEFT,bg="#8DBEF9",padx=9,command=timetable
+Creator''',image=img_3,compound=LEFT,bg="#8DBEF9",padx=9,command=timetable
 )
         staffmng_button['font']=myfont3
         staffmng_button.place(x=12,y=200)
@@ -894,7 +894,7 @@ def Totalperioddet():
 
 		total_periods.append([int(x) for x in templist])
 
-	print(total_periods)
+	
 
 
 	if sum(total_periods[0])>23 or sum(total_periods[1])>23 or sum(total_periods[2])>23 or sum(total_periods[3])>23 or sum(total_periods[4])>23:
@@ -1685,7 +1685,7 @@ def array():
 
 def create_tt():
 
-	print(CSE_Det,ECE_Det,EEE_Det,Civil_Det,Mech_Det)
+
 
 
 
@@ -1808,13 +1808,13 @@ def create_tt():
 			final.append(revmainsub[j])
 		last.append(final)
 	last1=[]
-	for i in EEE_TT:
+	for i in ECE_TT:
 		final=[]
 		for j in i:
 			final.append(revmainsub[j])
 		last1.append(final)
 	last2=[]
-	for i in ECE_TT:
+	for i in EEE_TT:
 		final=[]
 		for j in i:
 			final.append(revmainsub[j])
@@ -1835,7 +1835,6 @@ def create_tt():
 
 
 
-	print(last,last1,last2,last3,last4)
 
 	save_finaldata([last,last1,last2,last3,last4])
 
